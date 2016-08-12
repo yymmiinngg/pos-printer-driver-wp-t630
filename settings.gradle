@@ -1,0 +1,3 @@
+include 'pos-printer-driver-api'
+
+project(':pos-printer-driver-api').projectDir = new File(settingsDir, '../pos-printer-driver-api')

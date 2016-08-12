@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+version = '1.0.0'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+
+dependencies {
+    compile project(':pos-printer-driver-api')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+
+sourceSets {
+    main.java.srcDirs = ['src']
+    main.resources.srcDirs = ['conf']
+    test.java.srcDirs = ['test']
+}
